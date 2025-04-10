@@ -3,6 +3,7 @@ package io.github.dbc2201.spring.boot.demos.shopkart.product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -39,4 +40,29 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 	 * @return an Optional containing the found product, or an empty Optional if no product exists with the given name
 	 */
 	Optional<Product> findByName(String name);
+
+	/**
+	 * Finds all products with a price greater than the specified value.
+	 * <p>
+	 * This method allows filtering products based on a minimum price threshold.
+	 * Spring Data JPA automatically implements this method based on its name
+	 * following the pattern "findBy[PropertyName][GreaterThan]".
+	 *
+	 * @param price the minimum price threshold
+	 * @return a list of products with prices greater than the specified value
+	 */
+	List<Product> findByPriceGreaterThan(double price);
+
+	/**
+	 * Finds all products whose name contains the specified keyword, ignoring case.
+	 * <p>
+	 * This method provides a case-insensitive partial match search on product names.
+	 * For example, searching for "phone" would match "Smartphone", "iPhone", etc.
+	 * Spring Data JPA automatically implements this method based on its name
+	 * following the pattern "findBy[PropertyName][Containing][IgnoreCase]".
+	 *
+	 * @param keyword the search term to look for in product names
+	 * @return a list of products whose names contain the keyword (case insensitive)
+	 */
+	List<Product> findByNameContainingIgnoreCase(String keyword);
 }
