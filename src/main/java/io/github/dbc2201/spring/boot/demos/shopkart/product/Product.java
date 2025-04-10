@@ -1,6 +1,11 @@
 package io.github.dbc2201.spring.boot.demos.shopkart.product;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.util.Objects;
 
@@ -78,7 +83,10 @@ public class Product {
 		if (o == null || getClass() != o.getClass()) return false;
 
 		Product product = (Product) o;
-		return id == product.id && Double.compare(price, product.price) == 0 && Objects.equals(name, product.name) && Objects.equals(description, product.description) && Objects.equals(imageUrl, product.imageUrl);
+		return id == product.id && Double.compare(price, product.price) == 0
+				&& Objects.equals(name, product.name)
+				&& Objects.equals(description, product.description)
+				&& Objects.equals(imageUrl, product.imageUrl);
 	}
 
 	@Override
