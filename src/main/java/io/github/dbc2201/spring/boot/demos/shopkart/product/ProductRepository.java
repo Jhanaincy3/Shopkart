@@ -1,6 +1,7 @@
 package io.github.dbc2201.spring.boot.demos.shopkart.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -65,4 +66,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 	 * @return a list of products whose names contain the keyword (case insensitive)
 	 */
 	List<Product> findByNameContainingIgnoreCase(String keyword);
+
+	@Query("SELECT p FROM Product p WHERE p.price BETWEEN ?1 AND ?2 ORDER BY p.price ASC")
+	List<Product> findProductsInPriceRange(double minPrice, double maxPrice);
 }
