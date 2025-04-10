@@ -54,7 +54,8 @@ public class ProductController {
 	@PutMapping("/{id}/price")
 	public ResponseEntity<Product> updateProductPrice(
 			@PathVariable long id,
-			@RequestParam double price) {
+			@RequestParam double price
+	) {
 		Product product = productService.updateProductPrice(id, price);
 		if (product != null) {
 			return ResponseEntity.ok(product);
@@ -65,7 +66,8 @@ public class ProductController {
 	@PutMapping("/{id}/name")
 	public ResponseEntity<Product> updateProductName(
 			@PathVariable long id,
-			@RequestParam String name) {
+			@RequestParam String name
+	) {
 		Product product = productService.updateProductName(id, name);
 		if (product != null) {
 			return ResponseEntity.ok(product);
@@ -76,7 +78,8 @@ public class ProductController {
 	@PutMapping("/{id}/description")
 	public ResponseEntity<Product> updateProductDescription(
 			@PathVariable long id,
-			@RequestParam String description) {
+			@RequestParam String description
+	) {
 		Product product = productService.updateProductDescription(id, description);
 		if (product != null) {
 			return ResponseEntity.ok(product);
@@ -87,7 +90,8 @@ public class ProductController {
 	@PutMapping("/{id}/imageUrl")
 	public ResponseEntity<Product> updateProductImageUrl(
 			@PathVariable long id,
-			@RequestParam String imageUrl) {
+			@RequestParam String imageUrl
+	) {
 		Product product = productService.updateProductImageUrl(id, imageUrl);
 		if (product != null) {
 			return ResponseEntity.ok(product);
