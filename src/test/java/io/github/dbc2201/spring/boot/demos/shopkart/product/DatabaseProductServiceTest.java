@@ -133,8 +133,6 @@ class DatabaseProductServiceTest {
 		when(productRepository.findById(99L)).thenReturn(Optional.empty());
 
 		// Act & Assert
-		assertThrows(ProductNotFoundException.class, () -> {
-			productService.getProductById(99L);
-		});
+		assertThrows(ProductNotFoundException.class, () -> productService.getProductById(99L));
 	}
 }
