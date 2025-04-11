@@ -1,4 +1,4 @@
-package io.github.dbc2201.spring.boot.demos.shopkart.product;
+package io.github.dbc2201.spring.boot.demos.shopkart.product.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

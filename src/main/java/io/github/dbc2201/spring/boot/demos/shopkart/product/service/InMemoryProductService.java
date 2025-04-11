@@ -1,5 +1,6 @@
-package io.github.dbc2201.spring.boot.demos.shopkart.product;
+package io.github.dbc2201.spring.boot.demos.shopkart.product.service;
 
+import io.github.dbc2201.spring.boot.demos.shopkart.product.model.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

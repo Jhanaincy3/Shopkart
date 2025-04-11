@@ -1,4 +1,8 @@
-package io.github.dbc2201.spring.boot.demos.shopkart.product;
+package io.github.dbc2201.spring.boot.demos.shopkart.product.service;
+
+import io.github.dbc2201.spring.boot.demos.shopkart.product.exceptions.ProductNotFoundException;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.exceptions.ProductValidationException;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.model.Product;
 
 import java.util.List;
 

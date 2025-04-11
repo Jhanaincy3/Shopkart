@@ -1,4 +1,4 @@
-package io.github.dbc2201.spring.boot.demos.shopkart.product;
+package io.github.dbc2201.spring.boot.demos.shopkart.product.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

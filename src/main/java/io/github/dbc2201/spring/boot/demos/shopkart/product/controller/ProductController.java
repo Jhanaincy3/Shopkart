@@ -1,5 +1,7 @@
-package io.github.dbc2201.spring.boot.demos.shopkart.product;
+package io.github.dbc2201.spring.boot.demos.shopkart.product.controller;
 
+import io.github.dbc2201.spring.boot.demos.shopkart.product.service.ProductService;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.model.Product;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;

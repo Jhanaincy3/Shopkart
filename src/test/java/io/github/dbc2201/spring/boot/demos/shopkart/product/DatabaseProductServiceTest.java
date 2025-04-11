@@ -12,6 +12,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import io.github.dbc2201.spring.boot.demos.shopkart.product.exceptions.ProductNotFoundException;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.exceptions.ProductValidationException;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.model.Product;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.repository.ProductRepository;
+import io.github.dbc2201.spring.boot.demos.shopkart.product.service.DatabaseProductService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

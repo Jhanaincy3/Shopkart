@@ -1,4 +1,4 @@
-package io.github.dbc2201.spring.boot.demos.shopkart.product;
+package io.github.dbc2201.spring.boot.demos.shopkart.product.exceptions;
 
 /**
  * Exception thrown when there is an issue with product validation.
