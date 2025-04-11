@@ -6,6 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import org.hibernate.validator.constraints.URL;
 
 import java.util.Objects;
 
@@ -16,15 +21,38 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
+	/**
+	 * The name of the product.
+	 * Cannot be empty, and must be between 4 and 50 characters.
+	 */
+	@NotBlank(message = "Product name is required.")
+	@Size(min = 4, max = 50, message = "Product name must be between 4 and 50 characters.")
 	@Column(nullable = false)
 	private String name;
 
+	/**
+	 * The description of the product.
+	 * Cannot be empty, and must be between 10 and 100 characters.
+	 */
+	@NotBlank(message = "Product description is required.")
+	@Size(min = 10, max = 100, message = "Product description must be between 10 and 100 characters.")
 	@Column(nullable = false)
 	private String description;
 
+	/**
+	 * The price of the product. Must be a positive number greater than 0.
+	 */
+	@NotNull(message = "Product price is required.")
+	@Min(value = 0, message = "Product price must be greater than or equal to 0.")
 	@Column(nullable = false)
 	private double price;
 
+	/**
+	 * The URL of the product image.
+	 * Must be a valid URL format.
+	 */
+	@NotBlank(message = "Product image URL is required.")
+	@URL(message = "Please provide a valid image URL for the product image.")
 	@Column(nullable = false)
 	private String imageUrl;
 
