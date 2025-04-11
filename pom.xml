@@ -15,14 +15,19 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Shopkart</name>
     <description>Shopkart</description>
-    <url/>
+    <url>https://github.com/dbc2201/Shopkart</url>
 
     <licenses>
         <license/>
     </licenses>
 
     <developers>
-        <developer/>
+        <developer>
+            <name>Divyansh Bhardwaj</name>
+            <email>divyanshb22@gmail.com</email>
+            <id>dbc2201</id>
+            <url>https://github.com/dbc2201</url>
+        </developer>
     </developers>
 
     <scm>
